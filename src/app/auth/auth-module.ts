@@ -25,3 +25,7 @@ export interface registerRequest {
   password: string;
 }
 
+export interface loginRequest {
+  correo: string;
+  password: string;
+}

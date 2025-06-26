@@ -3,6 +3,8 @@ import {Component} from "@angular/core";
 
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {FormsModule} from "@angular/forms";
+import { Auth } from "../../services/auth";
+import { loginRequest } from "../../auth-module";
 
 
 @Component({
@@ -15,19 +17,25 @@ import {FormsModule} from "@angular/forms";
 })
 export class Login {
 
+  constructor(
+    private authService:Auth
+  ){}
 
 
 nocontrol :string =  ""
 Password :string =  ""
 
 
-onLogin(){
-  const datos ={
-    noControl: this.nocontrol,
-    Password:  this.Password,
+ onLogin(){
+  const datos: loginRequest ={
+    correo: this.nocontrol,
+    password:  this.Password,
   };
 
-  console.log("Objeto:", datos ); // como objeto 
+  const respuesta =  this.authService.login(datos)
+  console.log(respuesta);
+  
+
 }
 }
 
