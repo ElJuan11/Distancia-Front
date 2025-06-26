@@ -8,29 +8,41 @@
       <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
         <form>
           
-          <!-- Email input -->
+          <!-- Correo input -->
           <div data-mdb-input-init class="form-outline mb-4">
-            <input type="email" id="form3Example3" class="form-control form-control-lg"
-              placeholder="Enter a valid email address" />
-            <label class="form-label" for="form3Example3">Email address</label>
+            <input [(ngModel)]="formData.correo" name="correo" type="correo" id="form3Example3" class="form-control form-control-lg"
+              placeholder="Escribe tu Correo" />
+            <label class="form-label" for="form3Example3">Correo</label>
+          </div>
+
+          <!-- Nombre input -->
+          <div data-mdb-input-init class="form-outline mb-4">
+            <input [(ngModel)]="formData.nombre" name="nombre" type="nombre" id="form3Example4" class="form-control form-control-lg" 
+              placeholder="Escribe tu nombre" />
+          <label class="form-label" for="form3Example4">Nombre</label>
+          </div>
+
+          <!-- Apellidos input -->
+          <div data-mdb-input-init class="form-outline mb-4">
+            <input [(ngModel)]="formData.apellidos" name="apellidos" type="apellidos" id="form3Example4" class="form-control form-control-lg" 
+              placeholder="Escribe tus Apellido" />
+          <label class="form-label" for="form3Example4">Apellidos</label>
           </div>
 
           <!-- Password input -->
           <div data-mdb-input-init class="form-outline mb-3">
-            <input type="password" id="form3Example4" class="form-control form-control-lg"
-              placeholder="Enter password" />
-            <label class="form-label" for="form3Example4">Password</label>
+            <input [(ngModel)]="formData.password" name="contraseña" type="contraseña" id="form3Example5" class="form-control form-control-lg"
+              placeholder="Escribe una Contraseña" />
+            <label class="form-label" for="form3Example4">Contraseña</label>
           </div>
 
           <div class="d-flex justify-content-between align-items-center">            
-            <a href="#!" class="text-body">Forgot password?</a>
+            <a href="#!" class="text-body">¿Olvidaste tu contraseña?</a>
           </div>
 
           <div class="text-center text-lg-start mt-4 pt-2">
             <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg"
-              style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
-            <p class="small fw-bold mt-2 pt-1 mb-0">No tienes cuenta? <a href="#!"
-                class="link-danger">Registrate!!</a></p>
+              style="padding-left: 2.5rem; padding-right: 2.5rem;" (click)="onRegister()">Login</button>
           </div>
 
         </form>
