@@ -17,11 +17,11 @@ export class Register {
     nombre: '',
     apellidos: '',
     edad: '0',
-    sexo: '',
-    localidad: '',
+    sexo: 'TEST',
+    localidad: 'TEST',
     numTel: '000000',
     correo: '',
-    ocupacion: '',
+    ocupacion: 'TEST',
     password: ''
   };
 
