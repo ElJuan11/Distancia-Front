@@ -22,13 +22,13 @@ export class Login {
   ){}
 
 
-nocontrol :string =  ""
+correo :string =  ""
 Password :string =  ""
 
 
  onLogin(){
   const datos: loginRequest ={
-    correo: this.nocontrol,
+    correo: this.correo,
     password:  this.Password,
   };
 
